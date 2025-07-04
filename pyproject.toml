@@ -1,0 +1,23 @@
+[project]
+name = "parla"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Juliano Oliveira",email = "oliveira.juliano@outlook.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "streamlit (>=1.46.1,<2.0.0)",
+    "pandas (>=2.3.0,<3.0.0)",
+    "boto3 (>=1.39.3,<2.0.0)",
+    "openpyxl (>=3.1.5,<4.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "parla", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
