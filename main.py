@@ -67,7 +67,8 @@ def page_one():
 
 # Página 2: Teste de Fala
 def page_two():
-    st.title("Teste de Fala")
+    st.title("Teste de Transcrição")
+    st.markdown("## Leia exatamente o texto abaixo usando o microfone do seu teclado")
 
     # Carregar dados do Excel
     df = load_data("./textos_para_fala.xlsx") # Certifique-se de que este arquivo existe
@@ -97,7 +98,7 @@ def page_two():
         new_round()
 
     st.markdown(f"## <p style='text-align: center;'>{st.session_state.current_text}</p>", unsafe_allow_html=True)
-    st.markdown(f"<p style='text-align: center; font-size: 1.2em; color: gray;'>Velocidade: {st.session_state.current_speed}</p>", unsafe_allow_html=True)
+    st.markdown(f"<p style='text-align: center; font-size: 1.8em; color: gray;'>Velocidade: {st.session_state.current_speed}</p>", unsafe_allow_html=True)
 
     transcription = st.text_area("Transcreva o áudio aqui:", key="transcription_input", value=st.session_state.get("transcription_input", ""))
 
